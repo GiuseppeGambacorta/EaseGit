@@ -95,10 +95,11 @@ def set_name_and_email(name : str, email : str):
 def remote_presence(dir_path : str):
    temp = git_repo_run(dir_path, "remote")
 
-   if temp.returncode == 0:
-        return  0
-   else:
+   if temp.returncode == 0 and temp.stdout:
         return 1
+   else:
+        return 0
+   
 
 
 def Remote_Add(dir_path : str , remotename : str , url: str):
