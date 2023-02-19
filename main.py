@@ -131,7 +131,7 @@ prova = remote_presence(dir_path)
 print(prova)
 
 
-fast_push(dir_path)
+fast_push(dir_path,1)
 
 # Check if the .git directory exists
 #result = subprocess.run(["git", "-C", dir_path, "rev-parse", "--git-dir"], capture_output=True, text=True)
