@@ -117,8 +117,9 @@ def fast_push(dir_path : str):
     git_repo_run(dir_path,"commit", "-m" , datetime.now().strftime("%m-%d %H:%M") )
 
     if remote_presence(dir_path) == 1:
-        git_repo_run(dir_path, "push")
-        print("gesu")
+        temp = git_repo_run(dir_path, "push")
+        print(temp.returncode)
+
 
 
 Remote_Add(dir_path,"origin", "https://github.com/GiuseppeGambacorta/GitEase.git")
