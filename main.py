@@ -14,6 +14,8 @@ from datetime import datetime
 
 #nomi giusti a funzioni...oggetto_facose()
 #che cosa ritornare quando eseguo o leggo lo stato di certe cose?
+#controllare meglio che un comando sia andato a buon fine controllando anche sterror,
+#nel caso ci sia un errore bisogna stamparlo, e usare i try per non fermare il programma
 
 file_path = os.path.abspath(__file__)
 dir_path = os.path.dirname(file_path)
