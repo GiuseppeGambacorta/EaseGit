@@ -112,13 +112,17 @@ def Remote_Add(dir_path : str , remotename : str , url: str):
 
  
 
-def fast_push(dir_path : str):
+def fast_push(dir_path : str, force:int = 0):
+  
     git_repo_run(dir_path,"add",".")
     git_repo_run(dir_path,"commit", "-m" , datetime.now().strftime("%m-%d %H:%M") )
 
     if remote_presence(dir_path) == 1:
-        temp = git_repo_run(dir_path, "push")
-        print(temp.stderr)
+        if force ==0:
+            temp = git_repo_run(dir_path, "push")
+        if force == 1:
+            temp = git_repo_run(dir_path, "push", "-f")
+       
 
 
 
