@@ -102,12 +102,12 @@ def remote_presence(dir_path : str):
 
 
 def Remote_Add(dir_path : str , remotename : str , url: str):
-
+   temp = remote_presence(dir_path)
+   print(temp)
    if  remote_presence(dir_path) == 0:
         temp = git_repo_run(dir_path,"remote", "add", remotename , url)
 
 
-        print(temp.returncode)
 
 
  
