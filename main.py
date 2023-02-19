@@ -118,7 +118,7 @@ def fast_push(dir_path : str):
 
     if remote_presence(dir_path) == 1:
         temp = git_repo_run(dir_path, "push")
-        print(temp.returncode)
+        print(temp.stderr)
 
 
 
