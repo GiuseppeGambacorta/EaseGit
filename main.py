@@ -103,7 +103,7 @@ def remote_presence(dir_path : str):
 
 def Remote_Add(dir_path : str , remotename : str , url: str):
 
-   if not remote_presence(dir_path):
+   if  remote_presence(dir_path) == 0:
         temp = git_repo_run(dir_path,"remote", "add", remotename , url)
 
 
